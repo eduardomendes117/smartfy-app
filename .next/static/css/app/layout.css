@@ -534,6 +534,12 @@ video {
 .mt-10 {
   margin-top: 2.5rem;
 }
+.mt-2 {
+  margin-top: 0.5rem;
+}
+.block {
+  display: block;
+}
 .inline {
   display: inline;
 }
@@ -542,9 +548,6 @@ video {
 }
 .hidden {
   display: none;
-}
-.h-96 {
-  height: 24rem;
 }
 .w-3 {
   width: 0.75rem;
@@ -561,8 +564,8 @@ video {
 .w-full {
   width: 100%;
 }
-.max-w-80 {
-  max-width: 20rem;
+.max-w-64 {
+  max-width: 16rem;
 }
 .max-w-md {
   max-width: 28rem;
@@ -671,6 +674,9 @@ video {
 .pr-5 {
   padding-right: 1.25rem;
 }
+.text-center {
+  text-align: center;
+}
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -727,43 +733,41 @@ body {
   box-sizing: border-box;
 }
 
-.swiper-container {
-  max-width: 100%;
-  position: relative;
+.swiper {
+  width: 100%;
+  height: 100%;
 }
-/* 
+
+.swiper-wraper {
+  width: 100%;
+}
+
+
 .swiper-button-next,
 .swiper-button-prev {
-  color: #fff;
-  width: 27px;
-  height: 44px;
-  top: 50%;
-  transform: translateY(-50%);
+  color: white !important;
 }
 
-.swiper-button-next {
-  right: 10px;
-}
 
-.swiper-button-prev {
-  left: 10px;
-}
-
-@media (max-width: 768px) {
-  .swiper-button-next,
-  .swiper-button-prev {
-    width: 20px;
-    height: 36px;
-  }
-} */
 .placeholder\:text-sm::placeholder {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
+
+
+.after\:text-white::after {
+  content: var(--tw-content);
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+
 .focus-visible\:outline-none:focus-visible {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
+
+
 @media (min-width: 640px) {
 
   .sm\:flex {
@@ -774,6 +778,8 @@ body {
     display: none;
   }
 }
+
+
 @media (min-width: 1024px) {
 
   .lg\:block {
@@ -784,4 +790,3 @@ body {
     display: flex;
   }
 }
-

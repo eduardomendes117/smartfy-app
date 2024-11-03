@@ -1,15 +1,16 @@
 import Image from "next/image";
+import Banner from "../public/Banner001.jpg";
+
 import iPhone16P from "../public/iPhone16Pro.png";
 import iPhone16 from "../public/iPhone16.png";
 import iPhone15 from "../public/iPhone15.png";
 import iPhone14 from "../public/iPhone14.png";
 
-import S24ultra from "../public/S24ultra.png"
-import S24 from "../public/S24.png"
-import S23ultra from "../public/S23ultra.png"
-import S23 from "../public/S23.png"
+import S24ultra from "../public/S24ultra.png";
+import S24 from "../public/S24.png";
+import S23ultra from "../public/S23ultra.png";
+import S23 from "../public/S23.png";
 
-// import SwiperJS from "@/components/swiper";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SwiperJS from "@/components/swiper";
 
@@ -127,10 +128,17 @@ export default function Home() {
       <hr />
 
       <main className="max-w-screen-xl mx-auto">
-        <section className="p-5">
-          <div className="bg-blue-500 w-full rounded-2xl h-96 text-5xl text-white flex justify-center items-center">
-            Banner
+        <section className="swiper p-5">
+          <div className="swiper-wrapper">
+            <Image
+              className="swiper-slide bg-blue-500 w-full rounded-2xl text-5xl text-white flex justify-center items-center"
+              src={Banner}
+              alt="banner"
+            />
           </div>
+
+          <div className="swiper-button-next"></div>
+          <div className="swiper-button-prev"></div>
         </section>
 
         <section className="p-5">
@@ -146,9 +154,9 @@ export default function Home() {
 
           <div className="swiper-container mt-10">
             <div className="swiper-wrapper w-full relative">
-              {/* Aqui estão alguns slides de exemplo */}
 
-              <div className="swiper-slide border rounded-xl max-w-80">
+
+              <div className="swiper-slide border rounded-xl max-w-64">
                 <div className=" bg-gray-100 p-5 ">
                   <Image src={S24ultra} alt="S24ultra" />
                 </div>
@@ -158,10 +166,13 @@ export default function Home() {
                   <span className="text-sm text-blue-500 font-semibold">
                     R$ 8.000,00
                   </span>
+                  <button className="block w-full bg-blue-500 text-center text-white py-2 mt-2 rounded-full">
+                    comprar
+                  </button>
                 </div>
               </div>
 
-              <div className="swiper-slide border rounded-xl max-w-80">
+              <div className="swiper-slide border rounded-xl max-w-64">
                 <div className=" bg-gray-100 p-5 ">
                   <Image src={S24} alt="S24" />
                 </div>
@@ -170,9 +181,12 @@ export default function Home() {
                   <span className="text-sm text-blue-500 font-semibold">
                     R$ 6.500,00
                   </span>
+                  <button className="block w-full bg-blue-500 text-center text-white py-2 mt-2 rounded-full">
+                    comprar
+                  </button>
                 </div>
               </div>
-              <div className="swiper-slide  border rounded-xl max-w-80">
+              <div className="swiper-slide  border rounded-xl max-w-64">
                 <div className=" bg-gray-100 p-5 ">
                   <Image src={S23ultra} alt="S23ultra" />
                 </div>
@@ -182,10 +196,13 @@ export default function Home() {
                   <span className="text-sm text-blue-500 font-semibold">
                     R$ 5.000,00
                   </span>
+                  <button className="block w-full bg-blue-500 text-center text-white py-2 mt-2 rounded-full">
+                    comprar
+                  </button>
                 </div>
               </div>
 
-              <div className="swiper-slide border rounded-xl max-w-80">
+              <div className="swiper-slide border rounded-xl max-w-64">
                 <div className=" bg-gray-100 p-5 ">
                   <Image src={S23} alt="S23" />
                 </div>
@@ -195,6 +212,9 @@ export default function Home() {
                   <span className="text-sm text-blue-500 font-semibold">
                     R$ 4.000,00
                   </span>
+                  <button className="block w-full bg-blue-500 text-center text-white py-2 mt-2 rounded-full">
+                    comprar
+                  </button>
                 </div>
               </div>
             </div>
@@ -208,9 +228,7 @@ export default function Home() {
 
           <div className="swiper-container mt-10">
             <div className="swiper-wrapper w-full relative">
-              {/* Aqui estão alguns slides de exemplo */}
-
-              <div className="swiper-slide border rounded-xl max-w-80">
+              <div className="swiper-slide border rounded-xl max-w-64">
                 <div className=" bg-gray-100 p-5 ">
                   <Image src={iPhone16P} alt="iPhone" />
                 </div>
@@ -220,10 +238,13 @@ export default function Home() {
                   <span className="text-sm text-blue-500 font-semibold">
                     R$ 8.000,00
                   </span>
+                  <button className="block w-full bg-blue-500 text-center text-white py-2 mt-2 rounded-full">
+                    comprar
+                  </button>
                 </div>
               </div>
 
-              <div className="swiper-slide border rounded-xl max-w-80">
+              <div className="swiper-slide border rounded-xl max-w-64">
                 <div className=" bg-gray-100 p-5 ">
                   <Image src={iPhone16} alt="iPhone" />
                 </div>
@@ -232,9 +253,12 @@ export default function Home() {
                   <span className="text-sm text-blue-500 font-semibold">
                     R$ 6.500,00
                   </span>
+                  <button className="block w-full bg-blue-500 text-center text-white py-2 mt-2 rounded-full">
+                    comprar
+                  </button>
                 </div>
               </div>
-              <div className="swiper-slide  border rounded-xl max-w-80">
+              <div className="swiper-slide  border rounded-xl max-w-64">
                 <div className=" bg-gray-100 p-5 ">
                   <Image src={iPhone15} alt="iPhone" />
                 </div>
@@ -244,10 +268,13 @@ export default function Home() {
                   <span className="text-sm text-blue-500 font-semibold">
                     R$ 5.000,00
                   </span>
+                  <button className="block w-full bg-blue-500 text-center text-white py-2 mt-2 rounded-full">
+                    comprar
+                  </button>
                 </div>
               </div>
 
-              <div className="swiper-slide border rounded-xl max-w-80">
+              <div className="swiper-slide border rounded-xl max-w-64">
                 <div className=" bg-gray-100 p-5 ">
                   <Image src={iPhone14} alt="iPhone" />
                 </div>
@@ -257,6 +284,9 @@ export default function Home() {
                   <span className="text-sm text-blue-500 font-semibold">
                     R$ 4.000,00
                   </span>
+                  <button className="block w-full bg-blue-500 text-center text-white py-2 mt-2 rounded-full">
+                    comprar
+                  </button>
                 </div>
               </div>
             </div>
