@@ -13,7 +13,7 @@ const SwiperJS = () => {
   useEffect(() => {
     // Inicialização do Swiper
     swiperRef.current = new Swiper(".swiper-container", {
-      spaceBetween: 50,
+      spaceBetween: 20,
       slidesPerView: 3,
       pagination: {
         el: ".swiper-pagination",
