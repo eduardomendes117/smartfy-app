@@ -1,39 +1,37 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { useEffect } from "react";
+import Swiper from "swiper";
+import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-const SwiperJS = () => {
-  const swiperRef = useRef(null);
-
+export default function SwiperJS() {
   useEffect(() => {
-    // Inicialização do Swiper
-    swiperRef.current = new Swiper(".swiper-container", {
-      spaceBetween: 20,
-      slidesPerView: 3,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        type: "bullets",
-      },
+    // Inicializando o Swiper quando o componente for montado
+    const swiper = new Swiper(".swiper-container", {
+      slidesPerView: 3, // Quantidade de produtos visíveis por vez
+      spaceBetween: 30, // Espaço entre os cards
+      loop: false, // Habilitar loop de rolagem infinita
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
-      
-      scrollbar: {
-        el: '.swiper-scrollbar',
+      breakpoints: {
+        // Ajuste da quantidade de slides visíveis conforme a tela diminui
+        1024: {
+          slidesPerView: 3,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        480: {
+          slidesPerView: 1,
+        },
       },
-      
-       grabCursor: true,
-      freeMode: false,
     });
+
+    return () => swiper.destroy();
   }, []);
-
-};
-
-export default SwiperJS;
+}
